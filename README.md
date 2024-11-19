@@ -6,12 +6,11 @@ SheDefend is a comprehensive safety app built with Flutter, designed to empower 
 
 ## Key Features  
 
-- **Emergency Alerts:** Quickly notify your trusted contacts with your live location during emergencies.  
-
-- **Real-Time Location Tracking:** Enable your loved ones to monitor your movements in critical situations for added peace of mind.  
-
-- **Safe Route Guidance:** Find and navigate safer paths, avoiding high-risk areas with real-time updates and user feedback.  
-
-- **One-Tap Assistance:** Easily connect with emergency services such as police, medical help, and hotlines directly through the app.  
-
-- **Stay Educated:** Access regular updates on safety tips, self-defense techniques, and information about your legal rights.  
+- **SOS Alert Feature**: Notifies emergency contacts instantly in case of danger.
+- **Emergency Contacts**: Integrated women and police helplines for quick access.
+- **Community Chat**: A space for users to discuss safety concerns and share experiences.
+- **Resources Section**: Provides safety tips and self-defense techniques.
+- **Interactive Crime Map**: Displays crime hotspots with descriptions and safety alerts within a 200m radius.
+- **Color-Coded Crime Markers**: Indicate different crime intensities on the map.
+- **Crime Reporting**: Allows users to report incidents by tapping on the map, with data stored in a CSV file for display.
+- **Crime-Aware Routing**: Uses Flutter polylines and Directions API to suggest safer routes, avoiding high-crime areas.
