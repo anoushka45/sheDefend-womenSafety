@@ -117,7 +117,7 @@ class _ToolsPageState extends State<ToolsPage> {
               padding: const EdgeInsets.all(15.0),
               child: CardWithBackgroundImage(
                 description: "safe women",
-                imagePath: "assets/images/banner.png",
+                imagePath: "assets/images/w-banner.jpg",
                 title: 'Safety Tips',
               ),
             ),
@@ -176,28 +176,8 @@ class _ToolsPageState extends State<ToolsPage> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    child: ToolsCard(
-                      imageurl: 'assets/images/Siren.png',
-                      title: "Emergency",
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    child: ToolsCard(
-                      imageurl: 'assets/images/Wearable Technology.png',
-                      title: "Link Watch",
-                    ),
-                  ),
-                ),
+                
+                
               ],
             ),
           ],

@@ -18,7 +18,6 @@ class _sheDefendState extends State<sheDefend> {
     const HomePage(),
     const CrimeMap(),
     const CrimeMapTest(),
-    const MapPage(),
     const ToolsPage(),
     const CommunityPage(),
   ];
@@ -71,17 +70,17 @@ class _sheDefendState extends State<sheDefend> {
             ),
             label: "CrimeMapTest",
           ),
-          BottomNavigationBarItem(
-            activeIcon: Icon(
-              Boxicons.bxs_map,
-              color: Color(ColorsValue().secondary),
-            ),
-            icon: const Icon(
-              Boxicons.bx_map,
-              color: Colors.grey,
-            ),
-            label: "Map",
-          ),
+          // BottomNavigationBarItem(
+          //   activeIcon: Icon(
+          //     Boxicons.bxs_map,
+          //     color: Color(ColorsValue().secondary),
+          //   ),
+          //   icon: const Icon(
+          //     Boxicons.bx_map,
+          //     color: Colors.grey,
+          //   ),
+          //   label: "Map",
+          // ),
           BottomNavigationBarItem(
             activeIcon: Icon(
               Boxicons.bxs_shield,

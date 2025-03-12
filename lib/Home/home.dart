@@ -69,11 +69,19 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
+ @override
+Widget build(BuildContext context) {
+  return SafeArea(
+    child: Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.pinkAccent, Colors.white],
+          ),
+        ),
+        child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: SingleChildScrollView(
             child: Column(
@@ -81,36 +89,24 @@ class _HomePageState extends State<HomePage> {
                 // Display current location at the top of the screen
                 Text(
                   _location,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
                 ),
                 const SizedBox(height: 20),
-
-                //... Existing code (Profile and Safe Location UI)
-
                 const SizedBox(height: 64),
                 Text(
-                  "sheDefendk",
+                  "SheDefend",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 30,
-                      color: Color(ColorsValue().h1),
-                      fontWeight: FontWeight.w600),
-                ),
-                Text(
-                  "Contact Emergency Help",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 30,
-                      color: Color(ColorsValue().h1),
-                      fontWeight: FontWeight.w600),
+                    fontSize: 30,
+                    color: Color(ColorsValue().h1),
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
                 const SizedBox(height: 20),
-
-                // SOS button code
                 Container(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Material(
@@ -123,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                         await _sendSosMessage();
                       },
                       child: Ink.image(
-                        image: const AssetImage('assets/images/sos_button.png'),
+                        image: const AssetImage('assets/images/sos.png'),
                         height: 205,
                         width: 205,
                         fit: BoxFit.cover,
@@ -141,8 +137,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const SizedBox(height: 30),
-
-                // Emergency contacts button
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -151,32 +145,32 @@ class _HomePageState extends State<HomePage> {
                           builder: (context) => EmergencyContactsPage()),
                     );
                   },
-                  child: Text("Set Emergency Contacts"),
+                  child: const Text("Set Emergency Contacts"),
                 ),
                 const SizedBox(height: 20),
-
-                // Police and Women's Helpline buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                        onTap: () {
-                          _callNumber("7666816225");
-                        },
-                        child: HelpLineCards(
-                          title: "Police 100",
-                          assetImg: "assets/images/police_badge.png",
-                          number: "7666816225",
-                        )),
+                      onTap: () {
+                        _callNumber("7666816225");
+                      },
+                      child: HelpLineCards(
+                        title: "Police 100",
+                        assetImg: "assets/images/police_badge.png",
+                        number: "7666816225",
+                      ),
+                    ),
                     InkWell(
-                        onTap: () {
-                          _callNumber("7666816225");
-                        },
-                        child: HelpLineCards(
-                          title: "Women's Helpline",
-                          assetImg: "assets/images/girl_badge.png",
-                          number: "7666816225",
-                        )),
+                      onTap: () {
+                        _callNumber("7666816225");
+                      },
+                      child: HelpLineCards(
+                        title: "Women's Helpline",
+                        assetImg: "assets/images/girl_badge.png",
+                        number: "7666816225",
+                      ),
+                    ),
                   ],
                 ),
               ],
@@ -184,8 +178,9 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   Future<void> _sendSosMessage() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
