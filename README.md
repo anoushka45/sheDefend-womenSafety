@@ -1,4 +1,4 @@
-# SheDefend: Empowering Women's Safety  
+# SheDefend: Empowering Women's Safety [updated]  
 
 SheDefend is a comprehensive safety app built with Flutter, designed to empower women with essential tools for personal security. With its user-friendly interface and robust features, SheDefend strives to foster a safer environment for women everywhere.  
 
